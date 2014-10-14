@@ -2,27 +2,30 @@ clear all;
 
 %Test values these will be populated using the text files with the
 %corresponding conditions.
-f = [10 ; 0];
+
+%q1 hardcoded vals (20002 is number of timesteps for largest case)
 u = zeros(20002 , 1);
 c = [1 0 ; 0 1];
 k = [10 0 ; 0 10];
 m = [10, 0 ; 0 10];
 initConditions = [0 ; 0]; %explicit Q1
-initialConditions = [ 0, 0 ; 0, 0 ; 0, 0 ] % implicit 1 ..row 1 = Pos , r2 = Vel r3 = Acc Cols(x,y)
+initialConditions = [ 0, 0 ; 0, 0 ; 0, 0 ]; % implicit 1 ..row 1 = Pos , r2 = Vel r3 = Acc Cols(x,y)
 gamma = 3/2;
 beta = 8/5;
 % for the explicit calc we pass in  a matric of the values of the forces at that point
 force = zeros(20002, 1);
+
+%alternates x/y
 for a = 1:2:20002
     force(a) = 10;
     force(a+1) = 0;
 end
 
 % timeSteps and StopTime populated based on question perhaps? 
-e = 0.1; 
+e = 0.1; %delta t 
 e2 = 1;
 e3 = 0.01;
-timeStop = 5;
+timeStop = 5; %end of for loop
 
 
 % the three calls to explicit calc at each time increment

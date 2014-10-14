@@ -1,0 +1,18 @@
+
+- integrate reader
+- test q2
+- discuss q3
+
+
+Matt
+
+
+- populate mass matrix
+- construct c and k matrices (from proj1)
+- clean testScript up
+
+Matt 
+
+- enums
+- boundary conditions (file)
+- handle boudary conditions

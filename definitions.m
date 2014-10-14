@@ -31,7 +31,6 @@ xRoller = 3;
 free = 4;
 
 node = [];
-
 force = [];
 element = [];
 

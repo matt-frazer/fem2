@@ -14,7 +14,7 @@ function implicitResult = implicitCalc( timeStep, timeStop, globalDisplacementVe
     globalDisplacementVector(2) = currentPos(2);
     
     for time = 0:timeStep:timeStop
-        nextPos = expA \ ( nextForce + expB * currentPos + expC * currentVel + expD * currentAcc);
+        nextPos = LU_Inv(expA)* ( nextForce + expB * currentPos + expC * currentVel + expD * currentAcc);
         
         nextAcc = 2/(beta * timeStep) * (  (nextPos - currentPos) / timeStep ) - ...
             (2 / (beta * timeStep)) * currentVel - ((1 - beta) / beta) * currentAcc;
