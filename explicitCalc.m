@@ -16,6 +16,7 @@ function explicitResult = explicitCalc( timeStep, timeStop, globalDisplacementVe
     %Iterations for Explicit dynamics
     for time = 0:timeStep:timeStop
         nextDisplacement = LU_Inv(expA) * (currentForce - expB*currentDisplacement - expD*previousDisplacement);
+        % This is a note-to-self and can be removed
         % this value is the force applied externally the explicit calc
         % formula shown above accounts for the internal forces that act on
         % the node ( the spring and the damper)

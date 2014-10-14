@@ -5,8 +5,8 @@ Both
 
 
 Matt
-- populate mass matrix
-- construct c and k matrices (from proj1)
+- populate mass matrix  - depends on how we set up reader. but its quick we'll do the reader then split up to work on things
+- construct c and k matrices (from proj1) - Made functions to do it on an elemental basis requires reader to set up
 
 Matt 
 
